@@ -1,0 +1,22 @@
+def main() :
+   colors = {"red", "orange", "blue", "green"}  
+   if inRainbow(colors) :
+      print("rainbow colors")
+   else :
+      print("not rainbow colors")
+   
+##
+#  Determines whether  the colors in the given set are a subset of the colors
+#  of a rainbow.
+#  @param colors a set of strings representing color names
+#  @return a Boolean indicating whether the given colors are a subset of 
+#  the rainbow colors
+#
+def inRainbow(colors) :
+   rainbow = {"red", "orange", "yellow", "green", "blue", "indigo", "violet"}
+   for color in colors:
+      if color in rainbow:
+         return True
+      else:
+         return False
+main()
