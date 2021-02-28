@@ -1,0 +1,25 @@
+# Given numbers x, y, and target, return whichever of x and y is closer 
+# to the target. If they have the same distance, return the smaller of the two.
+
+def closerToTarget(x, y, target):
+   listR = []
+   listR.append(x)
+   listR.append(y)
+   listTarget = []
+   a = target - x
+   b = target - y
+   if a>0:
+       listTarget.append(a)
+   else:
+       listTarget.append(-a)
+   if b>0:
+       listTarget.append(b)
+   else:
+       listTarget.append(-b)
+   dist = min(listTarget)
+   if listTarget[0] == listTarget[-1]:
+       return min(listR)
+   else:
+       dict1 = zip(listTarget, listR)
+       return dict(dict1)[dist]
+          
