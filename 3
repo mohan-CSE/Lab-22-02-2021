@@ -1,0 +1,16 @@
+inputStr = input("Enter a text string: ")
+text = inputStr.upper()
+
+# TODO: define a set named notUsed that contains the letters of
+# the alphabet that are not contained in the user entered string.
+notUsed = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q',
+'R','S','T','U','V','W','X','Y','Z'}
+wanted = []
+for char in notUsed :
+   if char in text:
+      wanted.append(char)
+for i in wanted:
+   notUsed.remove(i)
+for element in sorted(notUsed) :
+   print(element, end="")
+print()
