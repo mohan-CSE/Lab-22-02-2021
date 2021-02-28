@@ -1,0 +1,14 @@
+# Given two strings s and t, return the first position where their 
+# characters differ, or -1 if they are identical.
+
+def firstPositionDiffer(s, t):
+   lists = list(s)
+   listt = list(t)
+   if s == t:
+       return -1
+   else:
+       for i in range(len(s)):
+           if lists[i] != listt[i]:
+               return i
+               break
+    
