@@ -1,0 +1,13 @@
+basket1 = {"apples", "oranges", "grapes"}  
+basket2 = {"blueberries", "pears", "apples", "oranges", "lemons"}  
+basket3 = {"bananas", "lemons", "grapes", "apples"}  
+list1 = []
+fruit = basket1.union(basket2)
+for f in fruit:
+   if f in basket3:
+      list1.append(f)
+for i in list1:
+   fruit.remove(i)
+for element in sorted(fruit) :
+   print(element, end=", ")
+print()   
