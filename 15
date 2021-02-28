@@ -1,0 +1,13 @@
+# Given an array of integers, return the position 
+# of the last occurrence of the largest element.
+# You may assume the given array has at least one element.
+# Do not use the index, find, or max methods.
+
+def positionOfLastLargest(arr):
+    a = arr.copy()
+    arr.sort()
+    max_ele = arr[-1]
+    for i in range(1, len(arr)):
+        if a[-i] == max_ele:
+            return len(arr)-(i)
+            break
