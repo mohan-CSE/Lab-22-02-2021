@@ -1,0 +1,25 @@
+# The periodic table of elements.
+periodicTable = {
+   "H": "Hydrogen", "C": "Carbon", "O": "Oxygen",
+   "Fe": "Iron", "Au": "Gold", "Na": "Sodium",
+   "Ag": "Silver", "Pb": "Lead", "Pu": "Plutonimum"
+}
+
+# Use the prompt "Enter symbol (or Q to quit): "
+# Print either "Invalid symbol." if an error occurs
+# or "element = element name" ("%s = %s")
+while True:
+   n = 1
+   element = input("Enter symbol (or Q to quit): ")
+   if element == "Q":
+      break
+   for keys in periodicTable:
+      if element == keys:
+         n = 2
+         break
+      else:
+         n=3
+   if n == 2:
+      print(element,"=",periodicTable[element])
+   else:
+      print("Invalid symbol.")
