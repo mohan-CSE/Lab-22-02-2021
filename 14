@@ -1,0 +1,14 @@
+# Given an array of integers, return the 
+# position of the first occurrence of the largest element.
+# You may assume the given array has at least one element.
+# Do not use the index, find, or max methods.
+
+def positionOfFirstLargest(arr):
+   a = arr.copy()
+   arr.sort()
+   max_ele = arr[-1]
+   for i in range(len(arr)):
+       if a[i] == max_ele:
+           return i
+           break
+       
