@@ -1,0 +1,15 @@
+# Given strings s and t, return a string in which all occurrences of t are removed from s.
+# Do not use the replace method.
+
+def removeAllOccurrences(s, t):
+   a = ""
+   list2 = list(s)
+   for i in t:
+       if i in list2:
+           for j in range(len(t)):
+               if i in list2:
+                   list2.remove(i)
+    
+   for char in list2:
+       a = a + char
+   return a
