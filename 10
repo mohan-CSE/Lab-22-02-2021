@@ -1,0 +1,20 @@
+# Given a string, return the string with the middle two characters removed if 
+# it has even length, and the middle character removed if it has odd length. If 
+# the string is less than 3 characters long, return the original string.
+
+def removeCenterCharacters(s):
+    list1 = list(s)
+    len_s = len(s)
+    if len(s)<3:
+       return s
+    elif len_s % 2 == 0:
+       list1.remove(s[int(len_s/2)-1])
+       list1.remove(s[int((len_s/2))])
+
+    elif len_s %2!=0:
+        list1.remove(s[int(len_s//2)])
+
+    s = ""
+    for i in list1:
+        s = s + i
+    return s
